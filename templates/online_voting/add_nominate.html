@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/student_style.css') }}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body style="background:linear-gradient(45deg, #47cebe, #ef4a82);">
+  <div class="container">
+    <div class="title">Add Nominate Details</div>
+    {% with messages=get_flashed_messages()%}
+    {% if messages %}
+    
+    {% for message in messages %}
+    <div class="alert">
+        <!-- <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  -->
+         <font color="red">{{message}}</font>.
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    
+    
+    <div class="content">
+      <form action="" method="POST" enctype="multipart/form-data">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Nominate Name</span>
+            <input type="text" name = "nominateName" placeholder="Enter Nominate Name" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Nominate ProfilePic</span>
+            <input type="file" name = "nominateProfilePic">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Nominate Class</span>
+            <select name="nominateClass" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="None">None</option>
+            <option value="6A">6A</option>
+            <option value="6B">6B</option>
+            <option value="7A">7A</option>
+            <option value="7B">7B</option>
+            <option value="8A">8A</option>
+            <option value="8B">8B</option>
+            <option value="9A1">9A1</option>
+            <option value="9A2">9A2</option>
+            <option value="9B1">9B1</option>
+            <option value="9B2">9B2</option>
+            <option value="10A">10A</option>
+            <option value="10B">10B</option>
+            <option value="inter-mpc">Inter-MPC</option>
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Nominate Position</span>
+            <select name="nominatePosition" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="None">None</option>
+            <option value="Captain">Captain</option>
+            <option value="Vice-Captain">Vice-Captain</option>
+            <option value="Lateral-Captain">Lateral Captain</option>
+            <option value="Lateral-ViceCaptain">Lateral Vice-Captain</option>
+            <option value="Sport-Captain">Sports Captain</option>
+            <option value="Sport-ViceCaptain">Sports Vice-Captain</option>
+            <option value="Cultural-Captain">Cultural Captain</option>
+            <option value="Cultural-ViceCaptain">Cultural Vice-Captain</option>
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Nominate Code</span>
+            <select name="nominateCode" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="00">None</option>
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="nominateGender" id="dot-1" value="Male">
+          <input type="radio" name="nominateGender" id="dot-2" value="Female">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender" >Male&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <!-- </label> -->
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Add Nominate">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

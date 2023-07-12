@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/student_style.css') }}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body style="background:linear-gradient(45deg, #47cebe, #ef4a82);">
+  <div class="container">
+    
+    <div class="title">Cast Vote Done</div>
+    {% with messages=get_flashed_messages()%}
+    {% if messages %}
+    
+    {% for message in messages %}
+    <div class="alert">
+        <!-- <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  -->
+         {{message}}.
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    
+    <div class="content">
+      <form action="" method="POST" enctype="multipart/form-data">
+        <div class="user-details">
+
+          <div class="input-box">
+          
+            
+            
+            <span class="details">Captain</span>
+            <select name="captain" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="Nota">Nota</option>
+            {% for c in nominate_list%}
+            {% if c.nominatePosition=='Captain' %}
+            <option value="{{c.nominateName}}">{{c.nominateName}} - {{c.nominateCode}}</option>
+            {% endif %}
+            {% endfor %}
+             
+
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Vice-Captain</span>
+            <select name="viceCaptain" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="Nota">Nota</option>
+            {% for c in nominate_list%}
+            {% if c.nominatePosition=='Vice-Captain' %}
+            <option value="{{c.nominateName}}">{{c.nominateName}} - {{c.nominateCode}}</option>
+            {% endif %}
+            {% endfor%}
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Lateral-Captain</span>
+            <select name="lateralCaptain" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="Nota">Nota</option>
+            {% for c in nominate_list%}
+            {% if c.nominatePosition=='Lateral-Captain' %}
+            <option value="{{c.nominateName}}">{{c.nominateName}} - {{c.nominateCode}}</option>
+            {% endif %}
+            {% endfor%}
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Lateral-Vice Captain</span>
+            <select name="lateralViceCaptain" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="Nota">Nota</option>
+            {% for c in nominate_list%}
+            {% if c.nominatePosition=='Lateral-ViceCaptain' %}
+            <option value="{{c.nominateName}}">{{c.nominateName}} - {{c.nominateCode}}</option>
+            {% endif %}
+            {% endfor%}
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Sport-Captain</span>
+            <select name="sportCaptain" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="Nota">Nota</option>
+            {% for c in nominate_list%}
+            {% if c.nominatePosition=='Sport-Captain' %}
+            <option value="{{c.nominateName}}">{{c.nominateName}} - {{c.nominateCode}}</option>
+            {% endif %}
+            {% endfor%}
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Sports Vice-Captain</span>
+            <select name="sportViceCaptain" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="Nota">Nota</option>
+            {% for c in nominate_list%}
+            {% if c.nominatePosition=='Sport-ViceCaptain' %}
+            <option value="{{c.nominateName}}">{{c.nominateName}} - {{c.nominateCode}}</option>
+            {% endif %}
+            {% endfor%}
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Cultural-Captain</span>
+            <select name="culturalCaptain" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="Nota">Nota</option>
+            {% for c in nominate_list%}
+            {% if c.nominatePosition=='Cultural-Captain' %}
+            <option value="{{c.nominateName}}">{{c.nominateName}} - {{c.nominateCode}}</option>
+            {% endif %}
+            {% endfor%}
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Cultural-Captain</span>
+            <select name="culturalViceCaptain" id="classes" style="width:100%; height:45px;" class="input-box">
+            <option value="Nota">Nota</option>
+            {% for c in nominate_list%}
+            {% if c.nominatePosition=='Cultural-ViceCaptain' %}
+            <option value="{{c.nominateName}}">{{c.nominateName}} - {{c.nominateCode}}</option>
+            {% endif %}
+            {% endfor%}
+
+            </select>
+          </div>
+        </div>
+        
+        <div class="button">
+          <input type="submit" value="Cast Your Vote">
+        </div>
+        
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/student_style.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style type="text/css">
+       body{
+      background: linear-gradient(45deg, #47cebe, #ef4a82);
+      max-height:100%;
+      height:900px;
+    }
+    img{
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .video{
+      display:block;
+    }
+     </style>
+   </head>
+<body style="background:linear-gradient(45deg, #47cebe, #ef4a82);">
+
+    <!-- <div class="title">Add Nominate Details</div> -->
+    
+    {% with messages=get_flashed_messages()%}
+    {% if messages %}
+    
+    {% for message in messages %}
+    
+        <!-- <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  -->
+         {{message}}.
+    
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div style="padding-left:80%;margin-top: 5%;">
+  <button>
+    <a href="{{url_for('voterLoginPage')}}"><i style="font-size: 20px;" class="fa fa-power-off" aria-hidden="true"></i></a>
+  </button>
+    </div>
+    <div class="video" style="height:auto;">
+    <center>
+        <video id="vid" width="420" height="400" autoplay muted>
+        <source src="{{ url_for('static', filename='images/thanksforvoting.mp4') }}" type="video/mp4">
+        </video>
+    </center>
+    </div>
+
+    <script type="text/javascript">
+      $(window).scroll(function(){
+    var myVideo = document.getElementById("vid");
+    // console.log($(window).scrollTop());
+    if($(window).scrollTop() > 300 && $(window).scrollTop() < 975){
+        myVideo.play();
+    }else{
+            myVideo.pause();
+    }
+})
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Voting Admin Register </title>-
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='student_style.css') }}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body style="background:linear-gradient(45deg, #47cebe, #ef4a82);">
+  <div class="container">
+    <div class="title">Voting Admin Registration</div>
+    {% with messages=get_flashed_messages()%}
+    {% if messages %}
+    
+    {% for message in messages %}
+    <div class="alert">
+        <!-- <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  -->
+         {{message}}.
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="content">
+      <form action="" method="POST">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name = "fullName" placeholder="Enter Full Name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email Id</span>
+            <input type="email" name = "emailId" placeholder="Enter Email Id" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name = "phoneNumber" placeholder="Enter Phone Number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" name = "password" placeholder="Enter Password" required>
+          </div>
+          
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nominate_style.css')}}">
+</head>
+<body>
+  <h3 style="text-align: center;margin-top: 5%;font-size: 30px;color:#44484C;">Nominate Details</h3>
+
+<div class="row">
+  
+  <h3 style="margin-left: 15%;color:#44484C;">Captain</h3>
+  
+  {% for nd in nominate_list %}
+  {%if nd.nominatePosition == 'Captain'%}
+  <div class="column">
+  <div class="card">
+<div class="card-image"><img src="{{ url_for('send_uploaded_file_nominate_profile_pic', filename=nd.nomProPic)}}"></div>
+  <div class="card-text">
+    <div class="details" style="text-align: justify;line-height: 2.0;margin-top: 15px;font-size: 14px;">
+        <p>
+          
+            <table>
+              
+              <tr>
+                  <td><b>Nominate Name</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateName}}</td>
+              </tr>
+
+              <tr>
+                  <td><b>Nominate Role</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominatePosition}}</td>
+              </tr>
+              <tr>
+                  <td><b>Class</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateClass}}</td>
+              </tr>
+              <tr>
+                  <td><b>Gender</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateGender}}</td>
+              </tr>
+              <tr>
+                  <td><b>Nominate Code</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateCode}}</td>
+              </tr>
+              
+            </table>
+            
+                 
+        </p>
+    </div>
+  </div>
+
+
+
+</div>
+
+</div>
+{% endif %}
+{% endfor %} 
+</div>
+
+
+<div class="row">
+  
+  <h3 style="margin-left: 15%;color:#CFDEEC;">Vice Captain</h3>
+  
+  {% for nd in nominate_list %}
+  {%if nd.nominatePosition == 'Vice-Captain'%}
+  <div class="column">
+    <div class="card">
+    <div class="card-image"><img src="{{ url_for('send_uploaded_file_nominate_profile_pic', filename=nd.nomProPic)}}"></div>
+  <div class="card-text">
+    <div class="details" style="text-align: justify;line-height: 2.0;margin-top: 15px;font-size: 14px;">
+        <p>
+          
+            <table>
+              
+              <tr>
+                  <td><b>Nominate Name</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateName}}</td>
+              </tr>
+
+              <tr>
+                  <td><b>Nominate Role</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominatePosition}}</td>
+              </tr>
+              <tr>
+                  <td><b>Class</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateClass}}</td>
+              </tr>
+              <tr>
+                  <td><b>Gender</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateGender}}</td>
+              </tr>
+              <tr>
+                  <td><b>Nominate Code</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateCode}}</td>
+              </tr>
+              
+            </table>
+            
+                 
+        </p>
+    </div>
+  </div>
+
+
+
+</div>
+
+</div>
+{% endif %}
+{% endfor %} 
+</div>
+
+<div class="row">
+  
+  <h3 style="margin-left: 15%;color:#CFDEEC;">Lateral Captain</h3>
+  
+  {% for nd in nominate_list %}
+  {%if nd.nominatePosition == 'Lateral-Captain'%}
+  <div class="column">
+    <div class="card">
+            <div class="card-image"><img src="{{ url_for('send_uploaded_file_nominate_profile_pic', filename=nd.nomProPic)}}"></div>
+  <div class="card-text">
+    <div class="details" style="text-align: justify;line-height: 2.0;margin-top: 15px;font-size: 14px;">
+        <p>
+          
+            <table>
+              
+              <tr>
+                  <td><b>Nominate Name</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateName}}</td>
+              </tr>
+
+              <tr>
+                  <td><b>Nominate Role</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominatePosition}}</td>
+              </tr>
+              <tr>
+                  <td><b>Class</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateClass}}</td>
+              </tr>
+              <tr>
+                  <td><b>Gender</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateGender}}</td>
+              </tr>
+              <tr>
+                  <td><b>Nominate Code</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateCode}}</td>
+              </tr>
+              
+            </table>
+            
+                 
+        </p>
+    </div>
+  </div>
+
+
+
+</div>
+
+</div>
+{% endif %}
+{% endfor %} 
+</div>
+ 
+
+<div class="row">
+  
+  <h3 style="margin-left: 15%;color:#CFDEEC;">Lateral Vice-Captain</h3>
+  
+  {% for nd in nominate_list %}
+  {%if nd.nominatePosition == 'Lateral-ViceCaptain'%}
+  <div class="column">
+    <div class="card">
+        <div class="card-image"><img src="{{ url_for('send_uploaded_file_nominate_profile_pic', filename=nd.nomProPic)}}"></div>
+  <div class="card-text">
+    <div class="details" style="text-align: justify;line-height: 2.0;margin-top: 15px;font-size: 14px;">
+        <p>
+          
+            <table>
+              
+              <tr>
+                  <td><b>Nominate Name</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateName}}</td>
+              </tr>
+
+              <tr>
+                  <td><b>Nominate Role</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominatePosition}}</td>
+              </tr>
+              <tr>
+                  <td><b>Class</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateClass}}</td>
+              </tr>
+              <tr>
+                  <td><b>Gender</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateGender}}</td>
+              </tr>
+              <tr>
+                  <td><b>Nominate Code</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateCode}}</td>
+              </tr>
+              
+            </table>
+            
+                 
+        </p>
+    </div>
+  </div>
+
+
+
+</div>
+
+</div>
+{% endif %}
+{% endfor %} 
+</div>
+ 
+<div class="row">
+  
+  <h3 style="margin-left: 15%;color:#CFDEEC;">Sports Captain</h3>
+  
+  {% for nd in nominate_list %}
+  {%if nd.nominatePosition == 'Sport-Captain'%}
+  <div class="column">
+    <div class="card">
+        <div class="card-image"><img src="{{ url_for('send_uploaded_file_nominate_profile_pic', filename=nd.nomProPic)}}"></div>
+  <div class="card-text">
+    <div class="details" style="text-align: justify;line-height: 2.0;margin-top: 15px;font-size: 14px;">
+        <p>
+          
+            <table>
+              
+              <tr>
+                  <td><b>Nominate Name</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateName}}</td>
+              </tr>
+
+              <tr>
+                  <td><b>Nominate Role</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominatePosition}}</td>
+              </tr>
+              <tr>
+                  <td><b>Class</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateClass}}</td>
+              </tr>
+              <tr>
+                  <td><b>Gender</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateGender}}</td>
+              </tr>
+              <tr>
+                  <td><b>Nominate Code</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateCode}}</td>
+              </tr>
+              
+            </table>
+            
+                 
+        </p>
+    </div>
+  </div>
+
+
+
+</div>
+
+</div>
+{% endif %}
+{% endfor %} 
+</div>
+
+<div class="row">
+  
+  <h3 style="margin-left: 15%;color:#CFDEEC;">Sports Vice-Captain</h3>
+  
+  {% for nd in nominate_list %}
+  {%if nd.nominatePosition == 'Sport-ViceCaptain'%}
+  <div class="column">
+    <div class="card">
+        <div class="card-image"><img src="{{ url_for('send_uploaded_file_nominate_profile_pic', filename=nd.nomProPic)}}"></div>
+  <div class="card-text">
+    <div class="details" style="text-align: justify;line-height: 2.0;margin-top: 15px;font-size: 14px;">
+        <p>
+          
+            <table>
+              
+              <tr>
+                  <td><b>Nominate Name</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateName}}</td>
+              </tr>
+
+              <tr>
+                  <td><b>Nominate Role</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominatePosition}}</td>
+              </tr>
+              <tr>
+                  <td><b>Class</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateClass}}</td>
+              </tr>
+              <tr>
+                  <td><b>Gender</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateGender}}</td>
+              </tr>
+              <tr>
+                  <td><b>Nominate Code</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateCode}}</td>
+              </tr>
+              
+            </table>
+            
+                 
+        </p>
+    </div>
+  </div>
+
+
+
+</div>
+
+</div>
+{% endif %}
+{% endfor %} 
+</div>
+
+<div class="row">
+  
+  <h3 style="margin-left: 15%;color:#CFDEEC;">Cultural Captain</h3>
+  
+  {% for nd in nominate_list %}
+  {%if nd.nominatePosition == 'Cultural-Captain'%}
+  <div class="column">
+    <div class="card">
+        <div class="card-image"><img src="{{ url_for('send_uploaded_file_nominate_profile_pic', filename=nd.nomProPic)}}"></div>
+  <div class="card-text">
+    <div class="details" style="text-align: justify;line-height: 2.0;margin-top: 15px;font-size: 14px;">
+        <p>
+          
+            <table>
+              
+              <tr>
+                  <td><b>Nominate Name</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateName}}</td>
+              </tr>
+
+              <tr>
+                  <td><b>Nominate Role</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominatePosition}}</td>
+              </tr>
+              <tr>
+                  <td><b>Class</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateClass}}</td>
+              </tr>
+              <tr>
+                  <td><b>Gender</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateGender}}</td>
+              </tr>
+              <tr>
+                  <td><b>Nominate Code</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateCode}}</td>
+              </tr>
+              
+            </table>
+            
+                 
+        </p>
+    </div>
+  </div>
+
+
+
+</div>
+
+</div>
+{% endif %}
+{% endfor %} 
+</div>
+
+<div class="row">
+  
+  <h3 style="margin-left: 15%;color:#CFDEEC;">Cultural Vice-Captain</h3>
+  
+  {% for nd in nominate_list %}
+  {%if nd.nominatePosition == 'Cultural-ViceCaptain'%}
+  <div class="column">
+    <div class="card">
+        <div class="card-image"><img src="{{ url_for('send_uploaded_file_nominate_profile_pic', filename=nd.nomProPic)}}"></div>
+  <div class="card-text">
+    <div class="details" style="text-align: justify;line-height: 2.0;margin-top: 15px;font-size: 14px;">
+        <p>
+          
+            <table>
+              
+              <tr>
+                  <td><b>Nominate Name</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateName}}</td>
+              </tr>
+
+              <tr>
+                  <td><b>Nominate Role</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominatePosition}}</td>
+              </tr>
+              <tr>
+                  <td><b>Class</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateClass}}</td>
+              </tr>
+              <tr>
+                  <td><b>Gender</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateGender}}</td>
+              </tr>
+              <tr>
+                  <td><b>Nominate Code</b></td>
+                  <td>:</td>
+                  <td>{{nd.nominateCode}}</td>
+              </tr>
+              
+            </table>
+            
+                 
+        </p>
+    </div>
+  </div>
+
+
+
+</div>
+
+</div>
+{% endif %}
+{% endfor %} 
+</div>
+</body>
+</html>
